@@ -33,7 +33,7 @@ def load_model():
     global model
     try:
         # Load YOLOv8 model. The class names are corrected at runtime.
-        model_path = '/Users/mateonegri/Developer/sist-inteligentes/runs/runs/detect/helmet_detection_v1_single_gpu3/weights/best.pt'
+        model_path = '/Users/mateonegri/Developer/helmet-detection/runs/runs/detect/helmet_detection_v1_single_gpu3/weights/best.pt'
         model = create_corrected_model(model_path)  # This function loads the model
         print("YOLOv8 model loaded successfully! Class names will be corrected during processing.")
     except Exception as e:

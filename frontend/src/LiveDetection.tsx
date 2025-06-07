@@ -159,19 +159,22 @@ const LiveDetection: React.FC = () => {
           const scaledWidth = (x2 - x1) * scaleX;
           const scaledHeight = (y2 - y1) * scaleY;
 
+          // Flip the X coordinates to match the mirrored video
+          const transformedX = canvas.width - scaledX1 - scaledWidth;
+
           const color = det.class === 'With_Helmet' ? '#28a745' : '#dc3545';
           context.strokeStyle = color;
           context.lineWidth = 3;
-          context.strokeRect(scaledX1, scaledY1, scaledWidth, scaledHeight);
+          context.strokeRect(transformedX, scaledY1, scaledWidth, scaledHeight);
           
           context.fillStyle = color;
           const label = `${translateClass(det.class)}: ${Math.round(det.confidence)}%`;
           context.font = '16px Arial';
           const textWidth = context.measureText(label).width;
-          context.fillRect(scaledX1, scaledY1 - 20, textWidth + 10, 20);
+          context.fillRect(transformedX, scaledY1 - 20, textWidth + 10, 20);
           
           context.fillStyle = '#ffffff';
-          context.fillText(label, scaledX1 + 5, scaledY1 - 5);
+          context.fillText(label, transformedX + 5, scaledY1 - 5);
         });
       };
       
