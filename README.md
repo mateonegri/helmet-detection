@@ -36,7 +36,7 @@ This project is a web application for detecting whether a person is wearing a he
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.13
 - Node.js and npm
 - Git
 
