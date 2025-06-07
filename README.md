@@ -1,5 +1,7 @@
 # Helmet Detection
 
+## Made by: Nicolas Colman - Mateo Negri Ocampo - Manuela Simes - Marcos Lopez - Agustin Lopez Villagra
+
 This project is a web application for detecting whether a person is wearing a helmet in an image or a live video stream. It uses a YOLOv8 model for object detection.
 
 ## Features
@@ -19,10 +21,9 @@ This project is a web application for detecting whether a person is wearing a he
 .
 ├── backend
 │   ├── app
-│   │   ├── __init__.py
+│   │   ├── class_fix_scripts.py
 │   │   └── main.py
 │   ├── requirements.txt
-│   └── yolov8m.pt
 ├── frontend
 │   ├── public
 │   ├── src
@@ -35,7 +36,7 @@ This project is a web application for detecting whether a person is wearing a he
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.13
 - Node.js and npm
 - Git
 
